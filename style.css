@@ -1,0 +1,385 @@
+/* Les deux couleurs principales sont le #333 un gris foncé et #f1f1f1 un blanc cassé*/
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+	background: #222020;
+}
+
+    .accueil,.timeline,.jeux:hover{
+
+    }
+/*petit logo pour la frise chronologique (un logo)*/
+    .img1{
+        margin-left:250px;
+    }
+/*petit logo pour la frise chronologique (double logo)*/
+    .img2{
+        margin-left:150px;
+    }
+/*Image sur la page d'accueil fond blanc et taille adaptative*/
+    .img3{
+        background-color: #f1f1f1;
+        max-width: 100%;
+        transition: all 250ms ease;
+        border-radius: 45%;
+    }
+    .img3:hover{
+		-webkit-transform:scale(1.05); /* Safari et Chrome */
+		-moz-transform:scale(1.05); /* Firefox */
+		-ms-transform:scale(1.05); /* Internet Explorer 9 */
+		-o-transform:scale(1.05); /* Opera */
+
+    }
+    
+/*Titre en tëte*/
+    h1{
+        text-align: center;
+        padding: 200px 0;
+        color: #f1f1f1;
+        background-color: #222020;
+        font font-weight: 500px;
+    }
+/*Autre text pour le QCM ect*/
+    h3,form,span,p{
+        margin-left:15px;
+        margin-right:15px;
+        background-color: #f1f1f1;
+    }
+    h2{
+        padding: 15px;
+       margin-left:15px;
+        margin-right:15px;
+        background-color: #f1f1f1; 
+    }
+/*commande qui permet d'enlever le noir sur l'image de l'accueil*/
+	.center{
+	background-color: #f1f1f1;
+	}
+/*menu*/
+    nav{
+    	width: 100%;
+    	margin: 0 auto;
+    	background-color: #f1f1f1;
+
+    	top: 0px;
+            border-radius: 5px;
+    }
+    nav ul{
+    	list-style-type: none;
+    }
+    nav ul li{
+    	float: left;
+    	width: 5%;
+    	text-align: center;
+    }
+    .menu{
+    	padding: 6%;
+        width: 100px;
+        transition: all 250ms ease;
+    }
+/* annimation pour quand on passe la souris sur le logo il grossit de 5%*/
+    .menu:hover{
+	-webkit-transform:scale(1.05); /* Safari et Chrome */
+	-moz-transform:scale(1.05); /* Firefox */
+	-ms-transform:scale(1.05); /* Internet Explorer 9 */
+	-o-transform:scale(1.05); /* Opera */
+    }
+
+    nav a{
+    	display: block;
+    	text-decoration: none;
+    	background-color: #222020 ;
+    	color: #f1f1f1;
+    	padding: 10px 0px;
+    }
+    .sous{
+        display: none;
+        box-shadow: 0px 1px 2px #CCC;
+        background-color: #f1f1f1;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        transition: 250ms max-height 0.3s;
+    }
+    nav > ul li:hover .sous{
+        display: block;
+    }
+    .sous li{
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+    .sous a{
+        padding: 10px;
+        border-bottom: none;
+    }
+    .sous a:hover{
+        border-bottom: none;
+        background-color: #CACACA;
+    }
+    nav a:hover{
+    	color: black;
+    }
+/*La frise chronologique*/
+
+    /*l'arrière de notre frise*/
+    .box-timeline {
+        height: 3000px;
+        background: #f1f1f1;
+        position: relative;
+        padding: 80px 0 250px 0;
+        border-radius: 5px; /*arrondissement des coins*/
+    }
+    /*la ligne de notre frise*/
+    .ligne {
+        height: 2830px;
+        width: 8px;
+        margin: 0 auto;
+        background: #222020;
+
+    }
+    /*Les ronds de notre frise*/
+    .rond {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #222020;
+        position: absolute;
+        left: 50%;/*permet de mettre la position des ronds*/
+        transform: translate(-50%);/*permet que les ronds s'ajuste bien sur la ligne*/
+       
+    }
+    /*les différents ronds de la frise*/
+    .r1{top: 80px;}/*sert a définir leurs hauteurs en fonction du haut de la box-timeline*/
+    .r2{top: 386px;}
+    .r3{top: 692px;}
+    .r4{top: 1000px;}
+    .r5{top: 1306px;}
+    .r6{top: 1612px;}
+    .r7{top: 1918px;}
+    .r8{top: 2224px;}
+    .r9{top: 2530px;}
+    .r10{top: 2836px;}
+
+    /*les box de la frise*/
+    .box{
+         color: #222020;
+        width: 400px;
+        min-height: 200px;/*leurs grandeurs minimum*/
+        padding: 20px;
+        height: auto;/*permet d'ajuster leurs grandeurs automatiquement en fonction du texte*/
+        background: #f1f1f1;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);/*ombres des box*/
+        position: absolute;/* définit la façon dont les box sont positionnées*/
+        transform: translate(-50%);/*permet que les box soit bien mise sur la ligne*/
+        border-radius: 5px;
+    }
+
+
+        /*les différentes box de la frise*/
+    .b1 {
+        top: 81px;
+        left: calc(50% - 310px);/*calcule qui permet de metre les box soit à droite soit à gauche, et de mettre les pixels qui les séparent de la ligne*/
+        transition: all 250ms ease;
+
+    }
+    .b2 {
+        top: 386px;
+        left: calc(50% + 310px);
+        transition: all 250ms ease;
+    }
+    .b3 {
+        top: 692px;
+        left: calc(50% - 310px);
+        transition: all 250ms ease;
+    }
+    .b4 {
+        top: 1000px;
+        left: calc(50% + 310px);
+        transition: all 250ms ease;
+    }
+    .b5 {
+        top: 1306px;
+        left: calc(50% - 310px);
+        transition: all 250ms ease;
+    }
+    .b6 {
+        top: 1612px;
+        left: calc(50% + 310px);
+        transition: all 250ms ease;
+    }
+    .b7 {
+        top: 1918px;
+        left: calc(50% - 310px);
+        transition: all 250ms ease;
+    }
+    .b8 {
+        top: 2224px;
+        left: calc(50% + 310px);
+        transition: all 250ms ease;
+    }
+    .b9 {
+        top: 2530px;
+        left: calc(50% - 310px);
+        transition: all 250ms ease;
+    }
+    .b10 {
+        top: 2836px;
+        left: calc(50% + 310px);
+        transition: all 250ms ease;
+    }
+    .box p{
+        line-height: 20px;
+        font-size: 18px;
+        margin: 10px 0 20px 0;
+    }
+
+
+
+    /*agrossiment des box quand on passe la souris dessus plus effet ombre plus grosse */
+    .b1:hover,.b3:hover,.b5:hover,.b7:hover,.b9:hover{
+left: calc(50% - 540px);
+-webkit-transform:scale(1.05); /* Safari et Chrome */
+-moz-transform:scale(1.05); /* Firefox */
+-ms-transform:scale(1.05); /* Internet Explorer 9 */
+-o-transform:scale(1.05); /* Opera */
+transform:scale(1.05);
+box-shadow: 0 20px 25px rgba(0,0,0,0.5);/*ombres des box*/
+    }
+
+    .b2:hover,.b4:hover,.b6:hover,.b8:hover,.b10:hover{
+left: calc(50% + 100px);
+-webkit-transform:scale(1.05); /* Safari et Chrome */
+-moz-transform:scale(1.05); /* Firefox */
+-ms-transform:scale(1.05); /* Internet Explorer 9 */
+-o-transform:scale(1.05); /* Opera */
+transform:scale(1.05);
+box-shadow: 0 20px 25px rgba(0,0,0,0.5);/*ombres des box*/
+    }
+
+/*Block de la page accueil et Frise chrono*/
+    .centre{
+        margin-left:15px;
+        margin-right:15px;
+        background-color: #f1f1f1;
+          border-radius: 5px;
+            border-bottom-right-radius:0px; 
+      border-bottom-left-radius:0px;
+    }    
+/* Block invisible qui permet de mettre QCM et plus ou moin dans le meme*/
+    .centreqcmavecplusoumoin{
+        position:relative;
+        display: flex;  
+        flex-wrap:nowrap;
+        flex-direction:row;
+        justify-content:center;
+        align-items:stretch;
+        margin-left:15px;
+        margin-right:15px;
+    }
+/*Block Qcm*/
+    .centreqcm{
+      float: left;
+      margin-right: 7.5px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      border-bottom-right-radius:0px; 
+      border-bottom-left-radius:0px;
+      width: 50%;
+      transition: all 250ms ease;
+    }
+
+/*Block plus ou moin*/
+    .centreplusoumoin{
+
+      transition: all 250ms ease;
+      float: right;
+      margin-left:7.5px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    border-bottom-right-radius:0px; 
+      border-bottom-left-radius:0px;
+      width: 50%
+    }
+/* annimation block QCM et block plus ou moin dans jeux*/
+    .centreqcm:hover,.centreplusoumoin:hover{
+		-webkit-transform:scale(1.02); /* Safari et Chrome */
+		-moz-transform:scale(1.02); /* Firefox */
+		-ms-transform:scale(1.02); /* Internet Explorer 9 */
+		-o-transform:scale(1.02); /* Opera */
+    }
+/*couleur des bouton de validation QCM et plus ou moin*/
+    input{
+            background-color: #DADADA;
+    }
+/* les textes des intro (intro le p et intro T le Titre);*/
+    .intro{
+        font-size: 25px;
+    }
+    .introT{
+           font-size: 35px;
+    }
+/* signature en bas a droite de l'accueil*/
+    .signature{
+        float: right;
+        background-color: #f1f1f1;
+        width: 200px;
+
+    }
+    .Jeuxbas{
+        float: right;
+    }
+
+/*La page info*/
+    .petitcarre{
+        margin: 15px;
+        border:solid 2px;
+        border-radius: 5px;
+        transition: all 250ms ease;
+    }
+    .petitcarre:hover{
+    -webkit-transform:scale(1.05); /* Safari et Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* Internet Explorer 9 */
+    -o-transform:scale(1.05); /* Opera */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);/*ombres des box*/
+    }
+
+    .boxinfo{
+        margin-left:15px;
+        margin-right:15px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        border-bottom-right-radius:0px; 
+        border-bottom-left-radius:0px;   
+    }
+    .boxinfo1{
+      float: left;
+      background-color: #f1f1f1;
+      width: 135px;
+      border-top-left-radius: 5px;
+
+    }
+    .boxinfo2{
+      float: right;
+      background-color: #f1f1f1;
+      width: calc(100% - 135px);
+    border-top-right-radius: 5px;
+    }
+    .titreinfo{
+        margin-top: 15px;
+        margin-bottom: 113.5px;
+    }
+    .info{
+        width: 50px;
+        background-color: #f1f1f1;
+        padding: 5px;
+        transition: all 250ms ease;
+    }
+    .info:hover{
+        -webkit-transform:scale(1.05); /* Safari et Chrome */
+        -moz-transform:scale(1.05); /* Firefox */
+        -ms-transform:scale(1.05); /* Internet Explorer 9 */
+        -o-transform:scale(1.05); /* Opera */
+    }

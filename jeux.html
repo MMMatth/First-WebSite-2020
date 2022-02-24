@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<!--On a esseyer de mettre un view porte mais le site reste plus accesible sans-->
+	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"!-->
+	<!--pour lier a notre fichier css-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--Petit logo sur l'onglet-->
+	<link rel="shortcut icon" type="image/png" href="IMG/ico.png"/>
+	<!--Importation d'une police via googe font-->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<head><title>Jeux</title></head>
+	<script>
+		function un(){
+			if ( (gener.check1.checked) == true && (gener.check2.checked) == false && (gener.check3.checked) == false )
+				{
+				alert("c'est la bonne réponse!");
+				score=score+1;
+				document.getElementById("resultat").innerHTML="vous avez "+score+" bonne(s) réponse(s)";
+				}
+			else
+				{
+				alert("désolé, continuez à chercher.");
+				}
+		}
+		function deux(){
+			if ( (uss.check1.checked) == false && (uss.check2.checked) == true && (uss.check3.checked) == false )
+				{
+				alert("c'est la bonne réponse!");
+				score=score+1;
+				document.getElementById("resultat").innerHTML="vous avez "+score+" bonne(s) réponse(s)";
+				}
+			else
+				{
+				alert("désolé, continuez à chercher.");
+				}
+		}
+		function trois(){
+			if ( (dis.check1.checked) == false && (dis.check2.checked) == false && (dis.check3.checked) == true )
+				{
+				alert("c'est la bonne réponse!");
+				score=score+1;
+				document.getElementById("resultat").innerHTML="vous avez "+score+" bonne(s) réponse(s)";
+				}
+			else
+				{
+				alert("désolé, continuez à chercher.");
+				}
+		}
+		function quatre(){
+			if ( (qel.check1.checked) == true && (qel.check2.checked) == false && (qel.check3.checked) == true )
+				{
+				alert("c'est la bonne réponse!");
+				score=score+1;
+				document.getElementById("resultat").innerHTML="vous avez "+score+" bonne(s) réponse(s)";
+				}
+			else
+				{
+				alert("désolé, continuez à chercher.");
+				}
+		}
+		function cinq(){
+			if ( (CD.check1.checked) == true && (CD.check2.checked) == false && (CD.check3.checked) == false )
+				{
+				alert("c'est la bonne réponse!");
+				score=score+1;
+				document.getElementById("resultat").innerHTML="vous avez "+score+" bonne(s) réponse(s)";
+				}
+			else
+				{
+				alert("désolé, continuez à chercher.");
+				}
+		}
+	</script>
+	<script>
+    	function un1(){
+    		var un1 = parseInt(document.PREMIER.zone1.value);
+    		if (un1==1728){
+    		alert("c'est la bonne réponse!");
+    		}
+
+    		if(un1<1728){
+    		alert("désolé, c'est plus !");
+    		}
+
+    		if(un1>1728){
+    		alert("désolé, c'est moins !");
+    		}
+  		}	
+	    function deux2(){
+    		var deux2 = parseInt(document.DEUXIEME.zone1.value);
+    		if (deux2==2000){
+    		alert("c'est la bonne réponse!");
+    		}
+
+    		if(deux2<2000){
+    		alert("désolé, c'est plus !");
+    		}
+
+    		if(deux2>2000){
+    		alert("désolé, c'est moins !");
+    		}
+   		}
+   	 	function trois3(){
+    		var trois3 = parseInt(document.TROISIEME.zone1.value);
+    		if (trois3==2007){
+    		alert("c'est la bonne réponse!");
+    		}
+
+    		if(trois3<2007){
+    		alert("désolé, c'est plus !");
+    		}
+
+    		if(trois3>2007){
+    		alert("désolé, c'est moins !");
+    		}
+   		}	
+   		function quatre4(){
+    		var quatre4 = parseInt(document.QUATRIEME.zone1.value);
+    		if (quatre4==1982){
+    		alert("c'est la bonne réponse!");
+    		}
+
+    		if(quatre4<1982){
+    		alert("désolé, c'est plus !");
+    		}
+
+    		if(quatre4>1982){
+    		alert("désolé, c'est moins !");
+    		}
+   		}
+  		function cinq5(){
+    		var cinq5 = parseInt(document.CINQUIEME.zone1.value);
+    		if (cinq5==11){
+    		alert("c'est la bonne réponse!");
+    		}
+
+    		if(cinq5<11){
+    		alert("désolé, c'est plus !");
+    		}
+
+    		if(cinq5>11){
+    		alert("désolé, c'est moins !");
+    		}
+    	}
+    	</script>
+<body>
+	<nav>
+		<ul>
+			<li><a class="menu" href="#"><img src="IMG\menu1.png" width="110%"></a>
+			<ul class="sous">
+			<li ><a href="index.html">Accueil</a></li>
+			<li ><a href="timeline.html">Frise chronologique</a></li>
+			<li ><a href="#">Jeux</a></li>
+		</ul>
+	</nav>
+
+	<h1>Jeux</h1></br>
+
+<div class="centreqcmavecplusoumoin">
+<div class="centreqcm">
+	<h2>QCM	</h2>
+			<h3>Quelle est la capicité maximum d'un CD</h3>
+				<script>
+				var score=0
+				</script>
+					<form name="gener">
+						<input type="checkbox" name="check1" value="1">0.91 Go<br>
+						<input type="checkbox" name="check2" value="2">7.5 Go<br>
+						<input type="checkbox" name="check3" value="3">6.67 Mo<br>
+						<input class=boutton type="button" name ="but" value=" &#10004; " onclick="un()">
+					</form><br/>
+			<h3>Quelle est la génération de stockage actuelle?</h3>
+					<form name="uss">
+						<input type="checkbox" name="check1" value="1">Le disque dur<br>
+						<input type="checkbox" name="check2" value="2">Le Cloud<br>
+						<input type="checkbox" name="check3" value="3">La carte SD<br>
+						<input type ="button" name ="but" value=" &#10004; " onclick="deux()">
+					</form>	<br/>
+			<h3>Quelle moyen de stockage fait partie de la même génération que la carte SD ?</h3>
+					<form name="dis">
+						<input type="checkbox" name="check1" value="1">Le CD<br>
+						<input type="checkbox" name="check2" value="2">La cassette<br>
+						<input type="checkbox" name="check3" value="3">La clef USB<br>
+						<input type ="button" name ="but" value=" &#10004; " onclick="trois()">
+				</form></br>
+			<h3>Parmis ces trois choix lesquelles sont des support de stockages ?</h3>
+
+					<form name="qel">
+						<input type="checkbox" name="check1" value="1">Un ruban perforé<br>
+						<input type="checkbox" name="check2" value="2">Un cable de téléphone<br>
+						<input type="checkbox" name="check3" value="3">Une clef Usb<br>
+						<input type ="button" name ="but" value=" &#10004; " onclick="quatre()">
+				</form></br>
+			<h3>Par qui a été developpé les CD ? ?</h3>
+
+					<form  name="CD">
+						<input type="checkbox" name="check1" value="1">Philips et Sony<br>
+						<input type="checkbox" name="check2" value="2">Philip Lin<br>
+						<input type="checkbox" name="check3" value="3">Philips et Sandiks<br>
+						<input type ="button" name ="but" value=" &#10004; " onclick="cinq()">
+				</form></br>
+		<span id="resultat">Score</span>
+		<p></br></p>
+</div>
+<div class="centreplusoumoin">
+			<h2>Jeux du plus ou Moin*</h2>
+
+
+			<form name="PREMIER">
+				<h3 >En quelle année à été invinté la carte perforée ?</h3>
+					<input type="text" name="zone1">
+					<input type="submit" value=" &#10004; " onclick="un1()">
+			</form></br>
+			<form  name="DEUXIEME">
+				<h3 >En quelle année à été crée la clef USB?</h3>
+					<input type="text" name="zone1">
+					<input type="submit" value=" &#10004; " onclick="deux2()">
+			</form></br>
+			<form name="TROISIEME">
+					<h3>En quelle année à été crée le cloud?</h3>
+					<input type="text" name="zone1">
+					<input type="submit" value=" &#10004; " onclick="trois3()">
+			</form></br>
+			<form name="QUATRIEME">
+					<h3>En quelle année à été crée le CD ?</h3>
+					<input type="text" name="zone1">
+					<input type="submit" value=" &#10004; " onclick="quatre4()">
+			</form></br>
+			<form name="CINQUIEME">
+					<h3>Combien y'a t'il de supports de stockages?</h3>
+					<input type="text" name="zone1">
+					<input type="submit" value=" &#10004; " onclick="cinq5()">
+			</form></br>
+		<span id="resultat1"></span>
+	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br><p class="Jeuxbas">*Attention de bien validé après chaque réponse écrite</p>
+</div>
+</div>
+</body>
